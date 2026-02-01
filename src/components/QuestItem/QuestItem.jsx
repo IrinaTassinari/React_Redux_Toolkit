@@ -16,8 +16,16 @@ function QuestItem({quest}){
 
     return(
         <div>
+            {/*
+            При клике на  span:
+              - отправляется объект действия (action) toggleQuest,
+              - redux изменяет св-во completed объекта квеста в массиве list,
+              - UI автоматически обновляется
+              - 
+            */}
             <span
                 style={{
+                    // если квест выполнен, то текст зачеркивается
                     textDecoration: quest.completed ? 'line-through' : 'none',
                     cursor: 'pointer'
                 }}
@@ -25,6 +33,14 @@ function QuestItem({quest}){
             >
                 {quest.text}
             </span>
+
+             {/*
+            При клике на  button:
+              - отправляется объект действия (action) removeleQuest,
+              - redux удаляет квест из сост-я навсегда,
+              - UI автоматически обновляется
+              - 
+            */}
             <button onClick={() => dispatch(removeQuest(quest.id))}>Delete</button>
         </div>
     )
