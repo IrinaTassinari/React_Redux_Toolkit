@@ -1,3 +1,8 @@
+// Slice — логика + состояние + actions в одном месте
+// Slice =
+// - кусок состояния (initialState)
+// - reducers (как менять state)
+// - actions (генерируются автоматически)
 // questsSlice - это основная логика quests в рамках работы с Redux Toolkit
 /**
  * Этот описывает:
@@ -141,4 +146,17 @@ export const { addQuest, toggleQuest, removeQuest, setFilter } = questsSlice.act
      }
  */
 export default questsSlice.reducer;
+
+
+// Когда вызывается:
+// dispatch(addQuest("New quest"))
+// Redux сам создаёт action:
+// {
+//   type: 'quests/addQuest',
+//   payload: {
+//     id: 'abc123',
+//     text: 'New quest',
+//     completed: false
+//   }
+// }
 

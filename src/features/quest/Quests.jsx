@@ -68,7 +68,7 @@ function Quests(){
             <Filter />
             {
                filtredList.map(q => (
-                    <QuestItem kye={q.id} quest={q}/>
+                    <QuestItem key={q.id} quest={q}/>
                )) 
             }
         </div>

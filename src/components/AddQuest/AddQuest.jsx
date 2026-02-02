@@ -54,3 +54,13 @@ function AddQuest(){
 }
 
 export default AddQuest;
+
+
+// Полный жизненный цикл одного клика
+// Нажимаешь Add new Quest
+// 1.dispatch(addQuest(text))
+// 2.Redux → questsSlice.reducer
+// 3.state.list.push(...)
+// 4.Store обновился
+// 5.useSelector сработал
+// 6.UI перерисовался

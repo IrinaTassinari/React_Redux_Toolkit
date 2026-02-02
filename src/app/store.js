@@ -1,4 +1,4 @@
-/**
+/**Store — центральное хранилище состояния
  * Redux Store (глобальное хранилище приложений)
  * Store-это:
  *  - единый об-кт, в котором хранится всё глобальное сост-е приложения;
@@ -7,6 +7,7 @@
  */
 
 //импортируем ф-ю configurestore from Redux Toolkit
+// configureStore создаёт Redux Store
 import {configureStore} from '@reduxjs/toolkit'
 
 /**
@@ -37,6 +38,7 @@ export const store = configureStore({
         /**
          * quests - это имя ветки в глобальном state.
          * В итоге стр-ра state будет такой:
+         * Глобальный state выглядит так:
          * state ={
          *  quests: {
          *      list: [...],
@@ -46,6 +48,8 @@ export const store = configureStore({
          * 
          * !!! имя ключа испол-ся в useSelector
          * useSelector(state => state.quests)
+         * quests — это ключ в глобальном state
+         * questsReducer управляет этим куском состояния
          * 
          */
         quests: questsReducer,

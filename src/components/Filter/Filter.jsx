@@ -39,7 +39,7 @@ function Filter(){
                                             : 'normal'
                     }}
                     >
-                        {filter}
+                        {filterItem}
                     </button>
             ))}
         </div>
