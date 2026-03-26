@@ -14,6 +14,9 @@ import {configureStore} from '@reduxjs/toolkit'
  * импортируем reducer  конкретной feauture 
  * questReducer - это НЕ весь store, это только часть одной логики (quest).
  * questReducer  создан через createSlice в questSlice.js
+ * 
+ * Reducer — это функция, которая говорит Redux:
+  “если произошло вот такое действие — вот как нужно изменить состояние”  (state, action) => newState
  */
 import questsReducer from '../features/quest/questsSlice'
 
@@ -55,3 +58,17 @@ export const store = configureStore({
         quests: questsReducer,
     }
 })
+
+
+
+// Redux Toolkit =
+
+// Store → единое состояние
+
+// Slice → логика + actions + reducers
+
+// Dispatch → «сообщение» что произошло
+
+// Reducer → как меняется state
+
+// Selector → чтение state в React

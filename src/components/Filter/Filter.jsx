@@ -46,3 +46,14 @@ function Filter(){
     )
 }
 export default Filter
+
+/**
+ * 
+useDispatch нужен, когда компонент что-то меняет
+useSelector нужен, когда компоненту нужно что-то читать из Store
+
+Можно:
+- использовать только useDispatch
+- использовать useDispatch + useSelector
+❌ нельзя использовать только useSelector (без смысла)
+ */
